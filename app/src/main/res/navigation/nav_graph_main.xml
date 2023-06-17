@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.recipefinder.ui.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/homeToList"
+            app:destination="@id/ListFragment" />
+
+        <action
+            android:id="@+id/homeToSheet"
+            app:destination="@id/selectIngredientsSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/ListFragment"
+        android:name="com.example.recipefinder.ui.list.ListFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/listToDetail"
+            app:destination="@id/detailFragment"
+
+            />
+        <argument
+            android:name="dietName"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="cuisineName"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="ingredients"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="query"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.recipefinder.ui.detail.DetailFragment"
+        android:label="DetailFragment">
+
+        <argument
+            android:name="recipeID"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true"
+        />
+        <action
+            android:id="@+id/detailToDetail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/selectIngredientsSheet"
+        android:name="com.example.recipefinder.ui.home.SelectIngredientsSheet"
+        android:label="SelectIngridientsSheet" >
+        <action
+            android:id="@+id/sheetToList"
+            app:destination="@id/ListFragment"/>
+
+    </dialog>
+</navigation>

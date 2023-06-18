@@ -16,11 +16,6 @@ import com.squareup.picasso.Picasso
 class BrowseCuisinesAdapter: RecyclerView.Adapter<BrowseCuisinesAdapter.ViewHolder>() {
 
 
-//    var cuisines: List<Cuisine> = emptyList()
-//        set(value) {
-//            field = value
-//            notifyDataSetChanged()
-//        }
 
     class ViewHolder(val binding: BrowseItemsBinding) : RecyclerView.ViewHolder(binding.root)
 

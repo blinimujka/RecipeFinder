@@ -29,9 +29,6 @@ class SelectIngredientsSheet : BottomSheetDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.doneBttn.setOnClickListener {
             HomeFragment.locationSelected = "ingredients"
-            println(myIngredientsList.toString())
-           myIngredientsList.toString()
-            println(myIngredientsList.toString())
            var bundle = bundleOf(Pair("ingredients",myIngredientsList.toString()))
             findNavController().navigate(R.id.sheetToList,bundle)
         }

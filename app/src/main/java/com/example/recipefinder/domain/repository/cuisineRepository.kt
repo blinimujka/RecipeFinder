@@ -26,7 +26,7 @@ class cuisineRepository {
         return api.getDietByName(dietName,number,apiKey)
     }
     suspend fun getRecipesByIngredients(ingredients:String): List<RecipesByIngredients> {
-        println(ingredients.toString())
+
         return api.getRecipesByIngredients(ingredients,number,apiKey)
     }
     suspend fun getRecipeById(id:String): DetailedRecipe{

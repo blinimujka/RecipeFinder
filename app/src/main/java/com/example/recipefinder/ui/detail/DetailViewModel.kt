@@ -30,13 +30,6 @@ class DetailViewModel: ViewModel() {
 
         }
     }
-//     fun getDietByName(dietName: String) {
-//        viewModelScope.launch {
-//            recipeList.addAll(repo.getDietByName(dietName).results)
-//            println("testDIet")
-//            recipeLiveData.value = recipeList
-//
-//        }
-//    }
+
 
 }

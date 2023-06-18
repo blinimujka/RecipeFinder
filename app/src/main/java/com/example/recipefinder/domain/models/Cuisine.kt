@@ -40,17 +40,4 @@ class Cuisine(
 
 
     )
-/*
-Japanese
-Jewish
-Korean
-Latin American
-Mediterranean
-Mexican
-Middle Eastern
-Nordic
-Southern
-Spanish
-Thai
-Vietnamese
-*/
+

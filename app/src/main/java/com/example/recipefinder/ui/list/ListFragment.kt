@@ -49,12 +49,6 @@ companion object{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        println("TEST LIST FRAGMENT")
-        println(args.cuisineName)
-        println(args.dietName)
-        println(args.ingredients)
-        println(HomeFragment.locationSelected)
         observeViewModel()
 
         when (HomeFragment.locationSelected) {

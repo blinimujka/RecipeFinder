@@ -44,8 +44,6 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.ViewHolder>() {
                 missingIcon.setImageResource(R.mipmap.ic_missing_foreground)
             }
                 root.setOnClickListener{
-                    println(currentRecipe.id)
-                    println(currentRecipe.id.toString())
                     var recipeID = bundleOf(Pair("recipeID",currentRecipe.id.toString()))
                     holder.itemView.findNavController().navigate(R.id.listToDetail,recipeID)
                 }

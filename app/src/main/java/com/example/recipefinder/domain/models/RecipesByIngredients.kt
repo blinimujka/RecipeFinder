@@ -15,11 +15,6 @@ data class RecipesByIngredients(
 
 )
 
-//data class RecipesByIngredientResponse (
-//
-//    @SerializedName("results" ) var resultsABC : ArrayList<RecipesByIngredients> = arrayListOf()
-//)
-
 data class MissedIngredients (
 
     @SerializedName("aisle"        ) var aisle        : String?           = null,

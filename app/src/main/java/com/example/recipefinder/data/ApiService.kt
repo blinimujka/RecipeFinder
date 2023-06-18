@@ -37,7 +37,6 @@ interface ApiService {
                                 @Query("apiKey") apiKey: String): List<SimilarRecipes>
 
 
-//https://api.spoonacular.com/recipes/complexSearch?query=chicken&apiKey=1b21366a928140af8745dbeda7538cd0
     @GET("recipes/complexSearch")
     suspend fun searchByName(@Query("query") query:String,
                             @Query("apiKey") apiKey:String): RecipesResponse

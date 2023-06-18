@@ -20,7 +20,7 @@ class ListViewModel: ViewModel() {
     fun getCuisineByName(cuisineName: String,number:Int) {
         viewModelScope.launch {
             recipeList.addAll(repo.getCuisineByName(cuisineName,number).results)
-            println("test cuisine")
+
             recipeLiveData.value = recipeList
 
         }
@@ -29,7 +29,7 @@ class ListViewModel: ViewModel() {
     fun getDietByName(dietName: String) {
         viewModelScope.launch {
             recipeList.addAll(repo.getDietByName(dietName).results)
-            println("testDIet")
+
             recipeLiveData.value = recipeList
 
         }
@@ -37,22 +37,16 @@ class ListViewModel: ViewModel() {
     fun getRecipesByIngredients(ingredients: String) {
         viewModelScope.launch {
             val array = repo.getRecipesByIngredients(ingredients)
-            println(array)
-
 
             array.forEachIndexed { index, item ->
                 var recipeObj = Recipe(item.id, item.title, item.image, item.imageType)
                 recipeList.add(recipeObj)
 
-                println("test missed")
-                println(item.title)
-                println("test now:")
                 var missedIngredientsString =""
 
                 item.missedIngredients.forEach { recipe ->
 
                     missedIngredientsString +="${recipe.name}, "
-                    println(recipe.name)
 
                     }
                 ListFragment.missedIngredients.add(missedIngredientsString.dropLast(2))

@@ -34,9 +34,6 @@ class SimilarRecipesAdapter: RecyclerView.Adapter<SimilarRecipesAdapter.ViewHold
     override fun getItemCount(): Int = similarRecipesList.size
 
     override fun onBindViewHolder(holder: SimilarRecipesAdapter.ViewHolder, position: Int) {
-
-        println("test1")
-        println(similarRecipesList)
         val currentRecipe = similarRecipesList[position]
 
         with(holder.binding){
